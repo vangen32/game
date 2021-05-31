@@ -1,0 +1,10 @@
+D:\Piatnashky\bin\Release\Piatnashky.exe.config
+D:\Piatnashky\bin\Release\Piatnashky.exe
+D:\Piatnashky\bin\Release\Piatnashky.pdb
+D:\Piatnashky\obj\Release\Piatnashky.csprojAssemblyReference.cache
+D:\Piatnashky\obj\Release\Piatnashky.Form1.resources
+D:\Piatnashky\obj\Release\Piatnashky.Properties.Resources.resources
+D:\Piatnashky\obj\Release\Piatnashky.csproj.GenerateResource.cache
+D:\Piatnashky\obj\Release\Piatnashky.csproj.CoreCompileInputs.cache
+D:\Piatnashky\obj\Release\Piatnashky.exe
+D:\Piatnashky\obj\Release\Piatnashky.pdb
