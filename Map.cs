@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,10 +15,11 @@ namespace Piatnashky
         private int freeY = 0;
         private int size;
         public int nullableItem = 0;
-        public void StartGame(int size)
+        public void StartGame(int playGroundSize, int playGroundPxSize)
         {
             this.nullableItem = 0;
-            this.size = size;
+            this.size = playGroundSize;
+            int picPxSize = playGroundPxSize / this.size;
             int counter = 0;
             this.GameField = new MapItem[this.size, this.size];
             for(int i=0; i< this.size; i++)
@@ -26,6 +28,12 @@ namespace Piatnashky
                 {
                     counter++;
                     var a = new Item(counter, k, i);
+                    
+                    Image temp = Properties.Resources.original;
+                    Bitmap src = new Bitmap(temp, playGroundPxSize, playGroundPxSize);
+                    Rectangle rect = new Rectangle(new Point(picPxSize*k, picPxSize*i), new Size(picPxSize, picPxSize));
+                    a.img = Picture.CutImage(src, rect);
+
                     this.GameField[i, k] = new MapItem(counter, k, i, a);
                     if (counter == GameField.Length)
                     {
@@ -35,7 +43,7 @@ namespace Piatnashky
                     }
                 }
             }
-            this.size = size;
+            this.size = playGroundSize;
             this.MixIt();
         }
 
@@ -195,7 +203,6 @@ namespace Piatnashky
                 }
             }
         }
-
         private List<Item> isMoveble()
         {
             List<Item> list = new List<Item>();

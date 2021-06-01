@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace Piatnashky
         public int Item_num { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
+        public Bitmap img { get; set; }
 
         public void ChangePos(int newX, int newY){
             this.X = newX;

@@ -38,6 +38,10 @@ namespace Piatnashky
             this.button2 = new System.Windows.Forms.Button();
             this.mapItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxPictures = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
@@ -103,7 +107,7 @@ namespace Piatnashky
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(15, 62);
+            this.button2.Location = new System.Drawing.Point(12, 62);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 23);
             this.button2.TabIndex = 6;
@@ -119,11 +123,47 @@ namespace Piatnashky
             // 
             this.itemBindingSource.DataSource = typeof(Piatnashky.Item);
             // 
+            // comboBoxPictures
+            // 
+            this.comboBoxPictures.FormattingEnabled = true;
+            this.comboBoxPictures.Location = new System.Drawing.Point(12, 128);
+            this.comboBoxPictures.Name = "comboBoxPictures";
+            this.comboBoxPictures.Size = new System.Drawing.Size(143, 21);
+            this.comboBoxPictures.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 155);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Завантажити";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Зображення:";
+            // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 541);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBoxPictures);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
@@ -135,6 +175,7 @@ namespace Piatnashky
             this.MinimumSize = new System.Drawing.Size(678, 577);
             this.Name = "Form1";
             this.Text = "П\"ЯТНАШКИ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mapItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
@@ -152,6 +193,10 @@ namespace Piatnashky
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBoxPictures;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
     }
 }
 

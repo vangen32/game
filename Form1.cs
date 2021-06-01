@@ -25,7 +25,7 @@ namespace Piatnashky
         private void StartGame(int size)
         {
             this.map = new Map();
-            map.StartGame((int)this.numericUpDown1.Value);
+            map.StartGame((int)this.numericUpDown1.Value, this.panelPlayZone.Width);
             AfterTurn();
         }
 
@@ -37,14 +37,15 @@ namespace Piatnashky
             {
                 if (item.isFree.Item_num != map.nullableItem)
                 {
-                    var but = new Button();
-                    but.Size = new Size(butSize, butSize);
-                    but.Location = new Point(item.X * butSize, item.Y * butSize);
-                    but.Text = item.isFree.Item_num.ToString();
-                    but.MouseClick += this.onButClick;
-                    but.TabIndex = 0;
-                    but.Tag = $"{item.X}, {item.Y}, {item.isFree.Item_num}";
-                    this.panelPlayZone.Controls.Add(but);
+                    var picture = new PictureBox();
+                    picture.Image = item.isFree.img;
+                    picture.Size = new Size(butSize, butSize);
+                    picture.Location = new Point(item.X * butSize, item.Y * butSize);
+                    //picture.Text = item.isFree.Item_num.ToString();
+                    picture.MouseClick += this.onButClick;
+                    picture.TabIndex = 0;
+                    picture.Tag = $"{item.X}, {item.Y}, {item.isFree.Item_num}";
+                    this.panelPlayZone.Controls.Add(picture);
                 }
             }
             this.panelPlayZone.Refresh();
@@ -53,7 +54,7 @@ namespace Piatnashky
        
         private void onButClick(object sender, MouseEventArgs e)
         {
-            string[] loc = (sender as Button).Tag.ToString().Split(',');
+            string[] loc = (sender as PictureBox).Tag.ToString().Split(',');
             int x = Int32.Parse(loc[0].Trim());
             int y = Int32.Parse(loc[1].Trim());
             int item_num = Int32.Parse(loc[2].Trim());
@@ -70,9 +71,18 @@ namespace Piatnashky
 
         private void button2_Click(object sender, EventArgs e)
         {
-            map.StartGame((int)this.numericUpDown1.Value);
+            map.StartGame((int)this.numericUpDown1.Value, this.panelPlayZone.Width);
             AfterTurn();
             this.labelTurn.Text = "0";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var a = Properties.Resources.ResourceManager.GetResourceSet(System.Globalization.CultureInfo.CurrentCulture, true, false);
         }
     }
 }

@@ -1,10 +1,10 @@
 D:\Piatnashky\bin\Debug\Piatnashky.exe.config
 D:\Piatnashky\bin\Debug\Piatnashky.exe
 D:\Piatnashky\bin\Debug\Piatnashky.pdb
-D:\Piatnashky\obj\Debug\Piatnashky.csprojAssemblyReference.cache
 D:\Piatnashky\obj\Debug\Piatnashky.Properties.Resources.resources
 D:\Piatnashky\obj\Debug\Piatnashky.csproj.GenerateResource.cache
 D:\Piatnashky\obj\Debug\Piatnashky.csproj.CoreCompileInputs.cache
 D:\Piatnashky\obj\Debug\Piatnashky.exe
 D:\Piatnashky\obj\Debug\Piatnashky.pdb
 D:\Piatnashky\obj\Debug\Piatnashky.Form1.resources
+D:\Piatnashky\obj\Debug\Piatnashky.csprojAssemblyReference.cache
