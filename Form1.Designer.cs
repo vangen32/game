@@ -45,6 +45,7 @@ namespace Piatnashky
             // 
             // panelPlayZone
             // 
+            this.panelPlayZone.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelPlayZone.Location = new System.Drawing.Point(161, 0);
             this.panelPlayZone.Margin = new System.Windows.Forms.Padding(0);
             this.panelPlayZone.Name = "panelPlayZone";
@@ -103,12 +104,15 @@ namespace Piatnashky
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Info;
             this.button2.Location = new System.Drawing.Point(15, 62);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 23);
             this.button2.TabIndex = 6;
             this.button2.Text = "Start";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // mapItemBindingSource
@@ -123,6 +127,7 @@ namespace Piatnashky
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(701, 541);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);

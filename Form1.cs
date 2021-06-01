@@ -44,6 +44,9 @@ namespace Piatnashky
                     but.MouseClick += this.onButClick;
                     but.TabIndex = 0;
                     but.Tag = $"{item.X}, {item.Y}, {item.isFree.Item_num}";
+                    but.BackColor = Color.RoyalBlue;
+                    but.Font = new Font("Arial Black", (butSize/3.5f));
+                    but.ForeColor = Color.DarkViolet;
                     this.panelPlayZone.Controls.Add(but);
                 }
             }
