@@ -54,15 +54,22 @@ namespace Piatnashky
        
         private void onButClick(object sender, MouseEventArgs e)
         {
+            bool isButMoveble = false;
             string[] loc = (sender as PictureBox).Tag.ToString().Split(',');
             int x = Int32.Parse(loc[0].Trim());
             int y = Int32.Parse(loc[1].Trim());
             int item_num = Int32.Parse(loc[2].Trim());
-            map.doTurn(x, y, item_num);
-            this.AfterTurn();
-            map.isWin();
-            this.turn++;
-            this.labelTurn.Text = this.turn.ToString();
+            foreach (Item it in map.isMoveble())
+                if (it.Item_num == item_num)
+                    isButMoveble = true;
+            if (isButMoveble)
+            {
+                map.doTurn(x, y, item_num);
+                this.AfterTurn();
+                map.isWin();
+                this.turn++;
+                this.labelTurn.Text = this.turn.ToString();
+            }
         }
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {

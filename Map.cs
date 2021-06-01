@@ -142,33 +142,6 @@ namespace Piatnashky
                         return;
             System.Windows.Forms.MessageBox.Show("You win");
         }
-
-        //private void MixIt()
-        //{ 
-        //    var rnd = new Random();
-        //    int id = 0;
-        //    int id2 = 0;
-        //    for (int i = 0; i < 1000; i++)
-        //    {
-        //        var moveble = this.isMoveble();
-        //        var a = rnd.Next(0, moveble.Count);
-        //        if (moveble[a].Item_num != id)
-        //        {
-        //            this.doTurn(moveble[a].X, moveble[a].Y, moveble[a].Item_num);
-        //            id = moveble[a].Item_num;
-        //        }
-        //        else if (i%2==0 && moveble[a].Item_num != id2)
-        //        {
-        //            this.doTurn(moveble[a].X, moveble[a].Y, moveble[a].Item_num);
-        //            id2 = moveble[a].Item_num;
-        //        }
-        //        else
-        //        {
-        //            i--;
-        //        }
-        //    }
-        //}
-
         private void MixIt()
         {
             var rnd = new Random();
@@ -203,7 +176,7 @@ namespace Piatnashky
                 }
             }
         }
-        private List<Item> isMoveble()
+        public List<Item> isMoveble()
         {
             List<Item> list = new List<Item>();
             int leftX = freeX - 1;
