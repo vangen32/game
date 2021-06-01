@@ -17,6 +17,8 @@ namespace Piatnashky
         int size = 4;
         public Form1()
         {
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             InitializeComponent();
             StartGame((int)this.numericUpDown1.Value);
         }
